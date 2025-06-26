@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    @apply text-[16px] md:text-[18px];
+  }
+  body{
+    @apply bg-zinc-800 text-zinc-400 font-sans min-h-screen;
+  }
+  footer{
+    @apply mt-auto w-screen h-40 bg-zinc-900 border-zinc-700 border-t-3 flex items-center justify-center text-zinc-500;
+  }
+}
+@layer components {
+  .back-arrow {
+    @apply page-link pl-2 text-4xl justify-self-start;
+  }
+  .blog-body {
+    @apply my-8 w-sm md:w-xl;
+  }
+  .blog-body a {
+    @apply text-[1rem] text-zinc-200 page-link
+  }
+  .blog-body > p {
+    @apply mb-4;
+  }
+  .blog-card {
+    @apply flex flex-col justify-center p-8 border-2 border-zinc-600 rounded-lg w-sm md:w-xl;
+  }
+  .blog-card > a {
+    @apply font-semibold w-fit
+  }
+  .blog-card > p {
+    @apply text-sm font-light
+  }
+  .header {
+    @apply grid grid-cols-[1fr_auto_1fr] items-center justify-items-center w-sm md:w-xl ;
+  }
+  .title {
+    @apply text-amber-600 font-bold text-[2.75rem];
+  }
+  .wrapper {
+    @apply min-h-screen flex flex-col justify-center items-center mt-[8rem];
+  }
+}
+
+@utility page-link {
+  @apply text-2xl hover:text-amber-600 duration-200;
+}
